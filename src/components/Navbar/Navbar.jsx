@@ -54,7 +54,7 @@ function Navbar() {
           </div>
           <span className="logo-text">LUMA<span className="logo-accent">BRAINS</span></span>
         </Link>
-
+        {menuOpen && <div className="menu-overlay" onClick={() => setMenuOpen(false)}></div>}
         <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
           {navLinks.map((link) => (
             <Link
