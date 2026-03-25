@@ -1,0 +1,165 @@
+.airdrop-page {
+  padding: 32px;
+  max-width: 1200px;
+}
+
+.airdrop-header {
+  margin-bottom: 32px;
+}
+
+.airdrop-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: rgba(255, 77, 106, 0.1);
+  border: 1px solid rgba(255, 77, 106, 0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--error);
+  margin-bottom: 12px;
+  animation: pulse 2s ease infinite;
+}
+
+.airdrop-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.airdrop-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.airdrop-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+}
+
+.progress-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.progress-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-primary);
+}
+
+.progress-info h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.progress-count {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.progress-bar {
+  height: 12px;
+  background: var(--bg-surface);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 6px;
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.progress-reward {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.progress-reward svg {
+  color: var(--warning);
+}
+
+.section-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.claim-airdrop-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--accent-gradient);
+  color: white;
+  border-radius: var(--radius-lg);
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all var(--transition-base);
+  box-shadow: var(--accent-glow);
+}
+
+.claim-airdrop-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--accent-glow-strong);
+}
+
+@media (max-width: 900px) {
+  .airdrop-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .airdrop-page {
+    padding: 20px 16px;
+  }
+
+  .airdrop-header h1 {
+    font-size: 1.5rem;
+  }
+}

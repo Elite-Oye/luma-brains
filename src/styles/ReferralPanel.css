@@ -1,0 +1,127 @@
+.referral-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+}
+
+.referral-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: var(--accent-secondary);
+}
+
+.referral-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.referral-link-box {
+  margin-bottom: 24px;
+}
+
+.referral-link-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.referral-link-input {
+  display: flex;
+  gap: 8px;
+}
+
+.referral-link-input input {
+  flex: 1;
+  padding: 12px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  background: rgba(123, 47, 247, 0.15);
+  color: var(--accent-primary);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background: rgba(123, 47, 247, 0.25);
+}
+
+.referral-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ref-stat {
+  text-align: center;
+  padding: 16px 8px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.ref-stat-icon {
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
+
+.ref-stat-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+.ref-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.share-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition-base);
+}
+
+.share-btn:hover {
+  background: rgba(123, 47, 247, 0.1);
+  box-shadow: var(--accent-glow);
+}
+
+@media (max-width: 480px) {
+  .referral-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .referral-link-input {
+    flex-direction: column;
+  }
+}

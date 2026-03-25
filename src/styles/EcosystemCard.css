@@ -1,0 +1,64 @@
+.eco-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.eco-card:hover {
+  border-color: rgba(123, 47, 247, 0.3);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.eco-card-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.eco-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.eco-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.eco-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.eco-card-action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.eco-card:hover .eco-card-action {
+  gap: 10px;
+}

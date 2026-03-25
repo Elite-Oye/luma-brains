@@ -1,0 +1,253 @@
+.social-page {
+  padding: 32px;
+  max-width: 1200px;
+}
+
+.social-content {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: var(--accent-primary);
+}
+
+.social-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.create-post {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.create-post-input {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.create-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.create-post-input textarea {
+  flex: 1;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  resize: none;
+  transition: border-color var(--transition-fast);
+  line-height: 1.5;
+}
+
+.create-post-input textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.create-post-input textarea:focus {
+  border-color: var(--accent-primary);
+}
+
+.create-post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-post-tools {
+  display: flex;
+  gap: 4px;
+}
+
+.tool-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: none;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.tool-btn:hover {
+  background: rgba(123, 47, 247, 0.1);
+  color: var(--accent-primary);
+}
+
+.post-submit-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  background: var(--accent-gradient);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all var(--transition-base);
+}
+
+.post-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--accent-glow);
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trending-card,
+.suggested-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+}
+
+.trending-header,
+.suggested-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--accent-primary);
+}
+
+.trending-header h3,
+.suggested-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.trending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.trending-item:hover {
+  background: rgba(123, 47, 247, 0.05);
+}
+
+.hash-icon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.trending-tag {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.trending-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.suggested-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggested-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.suggested-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.suggested-name {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.join-btn {
+  padding: 6px 14px;
+  background: rgba(123, 47, 247, 0.15);
+  color: var(--accent-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.join-btn:hover {
+  background: rgba(123, 47, 247, 0.25);
+}
+
+@media (max-width: 900px) {
+  .social-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-page {
+    padding: 20px 16px;
+  }
+
+  .social-header h1 {
+    font-size: 1.4rem;
+  }
+}
