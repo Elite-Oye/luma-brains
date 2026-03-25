@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard, Gift, Vote, Store, GraduationCap,
-  Code2, MessageCircle, ChevronLeft, ChevronRight, Trophy, Settings, HelpCircle
+  Code2, MessageCircle, ChevronLeft, ChevronRight, Trophy, Settings, HelpCircle, User,Star, Users
 } from 'lucide-react';
 import '../../styles/Sidebar.css';
 
@@ -12,14 +12,16 @@ function Sidebar() {
 
   const menuItems = [
     { path: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+    { path: '/profile', icon: User, label: 'Profile' },
     { path: '/airdrop', icon: Gift, label: 'Airdrop' },
+    { path: '/rewards', icon: Star, label: 'Rewards' },
     { path: '/dao', icon: Vote, label: 'DAO' },
     { path: '/marketsquare', icon: Store, label: 'MarketSquare' },
+    { path: '/communities', icon: Users, label: 'Communities' },
     { path: '/education', icon: GraduationCap, label: 'Education' },
     { path: '/social', icon: MessageCircle, label: 'Social Feed' },
     { path: '/developers', icon: Code2, label: 'Developers' },
-  ];
-
+];
  const bottomItems = [
     { path: '/leaderboard', icon: Trophy, label: 'Leaderboard' },
     { path: '/settings', icon: Settings, label: 'Settings' },

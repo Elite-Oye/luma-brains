@@ -16,7 +16,9 @@ import LeaderboardPage from './pages/LeaderboardPage/LeaderboardPage';
 import Settings from './pages/Settings/Settings';
 import Help from './pages/Help/Help';
 import './styles/App.css';
-
+import Profile from './pages/Profile/Profile';
+import Communities from './pages/Communities/Communities';
+import Rewards from './pages/Rewards/Rewards';
 function App() {
   const { wallet, showWalletModal } = useWallet();
   const location = useLocation();
@@ -42,6 +44,9 @@ function App() {
             <Route path="/leaderboard" element={<LeaderboardPage />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/help" element={<Help />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/communities" element={<Communities />} />
+            <Route path="/rewards" element={<Rewards />} />
           </Routes>
         </main>
       </div>

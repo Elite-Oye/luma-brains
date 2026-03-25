@@ -25,12 +25,18 @@ function Navbar() {
   const navLinks = wallet.connected
     ? [
         { path: '/dashboard', label: 'Dashboard' },
+        { path: '/profile', label: 'Profile' },
         { path: '/airdrop', label: 'Airdrop' },
+        { path: '/rewards', label: 'Rewards' },
         { path: '/dao', label: 'DAO' },
         { path: '/marketsquare', label: 'MarketSquare' },
+        { path: '/communities', label: 'Communities' },
         { path: '/education', label: 'Education' },
         { path: '/social', label: 'Social' },
         { path: '/developers', label: 'Developers' },
+        { path: '/leaderboard', label: 'Leaderboard' },
+        { path: '/settings', label: 'Settings' },
+        { path: '/help', label: 'Help' },
       ]
     : [
         { path: '/', label: 'Home', hash: '#hero' },

@@ -313,34 +313,34 @@
     display: none;
   }
 
-  .navbar-links {
+ .navbar-links {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 14, 26, 0.98);
-    backdrop-filter: blur(20px);
+    background: #0A0E1A;
     flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    padding: 24px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    padding: 100px 24px 40px;
     transform: translateX(100%);
     transition: transform var(--transition-base);
     z-index: 999;
-  }
+    overflow-y: auto;
+}
 
   .navbar-links.active {
     transform: translateX(0);
   }
-
-  .nav-link {
-    font-size: 1.2rem;
-    padding: 14px 24px;
+.nav-link {
+    font-size: 1rem;
+    padding: 12px 20px;
     width: 100%;
     text-align: center;
-  }
-
+    border-radius: 12px;
+}
   .mobile-only {
     display: flex;
     justify-content: center;
