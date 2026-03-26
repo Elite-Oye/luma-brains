@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Zap, Bell, ChevronDown, LogOut, User, Wallet } from 'lucide-react';
 import { useWallet } from '../../context/WalletContext';
 import '../../styles/Navbar.css';
+import logo from '../../assets/logo.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,9 +50,7 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <div className="logo-icon">
-            <Zap size={24} />
-          </div>
+          <img src={logo} alt="LUMA BRAINS" className="logo-icon-img" />
           <span className="logo-text">LUMA<span className="logo-accent">BRAINS</span></span>
         </Link>
         {menuOpen && <div className="menu-overlay" onClick={() => setMenuOpen(false)}></div>}
